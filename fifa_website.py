@@ -11,7 +11,8 @@ best_variables = ['value_eur',
  'international_reputation',
  'release_clause_eur']
 
-preparedModel = pkl.load("RandomForestRegressor.pkl")
+with open("RandomForestRegressor.pkl", "rb") as f:
+    preparedModel = pkl.load(f)
 
 stl.title("⚽ Fifa overall score predictor")
 stl.markdown("A simple web app used to predict the overall score of fifa players, picking top 7 varibales which had the highest correlation during training of the model. The model bost of an r2 score of 0.9839.")
